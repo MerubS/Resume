@@ -5,15 +5,25 @@
 }
 
 h1{
-    font-size: 50px;
+    font-size: 55px;
     font-family: 'Bitcount Grid Double', monospace;
+    margin: 0;
+    padding: 0;
+    color: #0077B6;
 }
 
+header h4{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+}
 .grid-container {
     background-color: lightgray;
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 5px;
+    padding: 15px;
 }
 
 .left {
@@ -21,12 +31,12 @@ h1{
     padding: 20px;
     height: 100%;
     text-align: center;
-    border-radius: 3%;
+    border-radius: 2%;
 }
 
 .right {
     position: relative;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     height: 100%; 
     display: flex;
     flex-direction: column; 
@@ -114,6 +124,7 @@ nav li {
     justify-content: center;  
     gap: 10px;                
     color: white;
+    font-family: 'Lato', sans-serif;
 }
 
 nav li a {
