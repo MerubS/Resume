@@ -98,15 +98,39 @@ footer {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    margin-top: 40px;
-    border-style: double;
-    border-width: 20px;
-    border-color: white;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;      
+  margin-top: 40px;
+  border-style: double;
+  border-width: 20px;
+  border-color: white;
+  border-radius: 50%; 
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
 }
+
+
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;   
+    border-width: 15px;
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 90px;
+    height: 90px;   
+    border-width: 10px;
+    margin-top: 15px;
+  }
+}
+
 
 
 .card {
