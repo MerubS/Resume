@@ -142,16 +142,18 @@ p{
     padding: 0;
 }
 
+
 .card p {
     margin-top: 5px; 
     margin-bottom: 10px;
 }
 
+
 .divider {
   border: none;           /* remove default */
     height: 1px;            /* thickness */
     background-color: #ccc; /* color */
-    margin: 70px;
+    margin: 50px;
     /* padding: 20px; */
 }
 
