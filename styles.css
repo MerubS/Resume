@@ -1,5 +1,7 @@
-header {
-    text-align: left;
+.right header {
+    flex: 0 0 auto;   /* height determined by content */
+    margin-bottom: 20px;
+     text-align: left;
 }
 
 h1{
@@ -17,13 +19,17 @@ h1{
 .left {
     background-color: #0077B6;
     padding: 20px;
+    height: 100%;
     text-align: center;
-    height: 100vh;
     border-radius: 3%;
 }
 
 .right {
+    position: relative;
     background-color: lightgreen;
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
     border-radius: 3%;
     padding: 20px;
     text-align: center;
@@ -36,7 +42,21 @@ h1{
     object-fit: cover;
 }
 
+.card:first-of-type {
+    display: block;
+    opacity: 1;
+}
+
+.card:target {
+    display: block;
+    opacity: 1;
+}
+
 .card{
+    flex: 1;
+    overflow-y: auto;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
     background-color: white;
     padding: 20px;
     margin: 20px auto;
