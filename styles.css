@@ -125,6 +125,18 @@ p{
   display: flex;
 }
 
+.technical-icons {
+    font-size: 40px;         /* increase icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.technical-icons i {
+    padding-right: 20px;
+}
+
 .social-icons a {
   display: flex;
   align-items: center;
