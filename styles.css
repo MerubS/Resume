@@ -180,11 +180,29 @@ p {
 }
 
 .technical-icons {
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+  font-size: 40px;                 
+  display: flex;
+  flex-wrap: wrap;                 
+  gap: 15px;                       
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .technical-icons {
+    font-size: 32px;              
+    gap: 12px;                    
+  }
+}
+
+
+@media (max-width: 480px) {
+  .technical-icons {
+    font-size: 26px;             
+    gap: 10px;
+  }
 }
 
 .technical-icons i {
