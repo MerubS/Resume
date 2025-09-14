@@ -1,3 +1,12 @@
+body {
+  /* background-color: lightseagreen; */
+  display: grid;
+  grid-template-rows: 1fr auto; 
+  height: 100vh; 
+  margin: 0;
+}
+
+
 .right header {
     flex: 0 0 auto;  
     margin-bottom: 20px;
@@ -21,9 +30,16 @@ header h4{
 .grid-container {
     background-color: lightgray;
     display: grid;
-    grid-template-columns: 30% 70%;
-    gap: 5px;
-    padding: 15px;
+  grid-template-columns: 25% 75%;
+ margin: 0 auto;
+ align-items: center;
+ gap: 5px;
+  /* align-items: center;     
+  justify-items: center; */
+  padding: 25px;
+  /* padding-bottom: 50px; */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .left {
@@ -32,17 +48,23 @@ header h4{
     height: 100%;
     text-align: center;
     border-radius: 2%;
+    min-width: 0; 
+  min-height: 0;
+  overflow: auto;
 }
 
 .right {
     position: relative;
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
     height: 100%; 
     display: flex;
     flex-direction: column; 
-    border-radius: 3%;
+    border-radius: 2%;
     padding: 20px;
     text-align: center;
+    min-width: 0; 
+  min-height: 0;
+  overflow: auto;
 }
 
 .profile-pic {
@@ -112,7 +134,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;  /* vertical stack */
+    flex-direction: column;  
     gap: 10px;
     margin: 0;
     padding: 0;
@@ -137,4 +159,10 @@ nav li span {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+footer{
+     color: #0077B6;
+  text-align: center;
+  margin-top: 5px;
 }
