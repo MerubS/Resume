@@ -48,6 +48,13 @@ body {
     text-decoration: none;
 }
 
+.sidebar nav ul li:hover {
+    background-color: #03045E;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
 .content {
     flex: 1;
     display: flex;
@@ -114,6 +121,12 @@ footer {
 p {
     font-family: 'Lato', sans-serif;
 }
+
+.sidebar nav ul li:has(a:focus) {
+  background-color: #f0f0f0;
+  color: #0073e6;
+}
+
 
 /* nav li {
   display: flex;
