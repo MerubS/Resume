@@ -10,7 +10,6 @@ body {
 .layout {
     display: grid;
     grid-template-columns: 250px 1fr;
-    /* sidebar + content */
     min-height: 100vh;
 }
 
@@ -46,6 +45,13 @@ body {
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #00B4D8;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s;
 }
 
 .content {
@@ -91,15 +97,39 @@ footer {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    margin-top: 40px;
-    border-style: double;
-    border-width: 20px;
-    border-color: white;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;      
+  margin-top: 40px;
+  border-style: double;
+  border-width: 20px;
+  border-color: white;
+  border-radius: 50%; 
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
 }
+
+
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;   
+    border-width: 15px;
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 90px;
+    height: 90px;   
+    border-width: 10px;
+    margin-top: 15px;
+  }
+}
+
 
 
 .card {
@@ -115,20 +145,11 @@ p {
     font-family: 'Lato', sans-serif;
 }
 
-/* nav li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: white;
-  font-family: "Lato", sans-serif;
-} */
+.sidebar nav ul li:has(a:focus) {
+  background-color: #f0f0f0;
+  color: #0073e6;
+}
 
-/* nav li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-} */
 
 .sidebar nav li span {
     display: flex;
@@ -143,11 +164,29 @@ p {
 }
 
 .technical-icons {
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+  font-size: 40px;                 
+  display: flex;
+  flex-wrap: wrap;                 
+  gap: 15px;                       
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .technical-icons {
+    font-size: 32px;              
+    gap: 12px;                    
+  }
+}
+
+
+@media (max-width: 480px) {
+  .technical-icons {
+    font-size: 26px;             
+    gap: 10px;
+  }
 }
 
 .technical-icons i {
@@ -194,155 +233,3 @@ p {
     padding-right: 20px;
 }
 
-/* html {
-  scroll-behavior: smooth;
-}
-
-body {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  height: 100vh;
-  margin: 0;
-}
-
-.right header {
-  flex: 0 0 auto;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-h1 {
-  font-size: 55px;
-  font-family: "Bitcount Grid Double", monospace;
-  margin: 0;
-  padding: 0;
-  color: #0077b6;
-}
-
-header h4 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-  font-family: "Lato", sans-serif;
-}
-.grid-container {
-  background-color: lightgray;
-  display: grid;
-  grid-template-columns: 25% 75%;
-  margin: 0 auto;
-  align-items: center;
-  gap: 5px;
-  padding: 25px;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.left {
-  background-color: #0077b6;
-  padding: 20px;
-  height: 100%;
-  text-align: center;
-  border-radius: 2%;
-  min-width: 0;
-  min-height: 0;
-  overflow: auto;
-}
-
-.right {
-  background-color: lightgreen;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 2%;
-  padding: 20px;
-  text-align: center;
-  min-width: 0;
-  min-height: 0;
-  overflow: auto;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  border-style: double;
-  border-width: 20px;
-  border-color: white;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.card {
-  background-color: white;
-  padding: 20px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: left;
-  width: 100%;
-}
-
-.social-icons {
-  margin-top: 20px;
-  gap: 15px;
-  display: flex;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: darkgray;
-  color: white;
-}
-
-.row-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-}
-
-nav {
-  margin-top: 20px;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: white;
-  font-family: "Lato", sans-serif;
-}
-
-nav li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-nav li span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer {
-  color: #0077b6;
-  text-align: center;
-  margin-top: 5px;
-} */
