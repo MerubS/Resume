@@ -137,6 +137,33 @@ p{
   color: white;
 }
 
+.card .row-item h4 {
+    margin: 0;      
+    padding: 0;
+}
+
+.card p {
+    margin-top: 5px; 
+    margin-bottom: 10px;
+}
+
+.divider {
+  border: none;           /* remove default */
+    height: 1px;            /* thickness */
+    background-color: #ccc; /* color */
+    margin: 70px;
+    /* padding: 20px; */
+}
+
+.row-item {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* margin: 10px 0; */
+  margin: 0;
+  padding: 0;
+  /* background-color: lightgreen; */
+}
 
 /* html {
   scroll-behavior: smooth;
